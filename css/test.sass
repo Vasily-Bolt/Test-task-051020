@@ -10,9 +10,9 @@ $top-menu-padding-of-each-elem: 66px
 @import fonts
 
 html 
-    font-size: 16px
+  font-size: 16px
 
-@media screen and (max-width: 1200px) 
+@media screen and (max-width: $width-when-adjust) 
   html
     font-size: 1.5vw
 
@@ -20,6 +20,9 @@ html
 body
   max-width: 1366px
   margin: 0 auto
+  display: flex
+  justify-content: center
+  align-content: center
 p, ul, li, a
   margin: 0
   padding: 0
@@ -27,57 +30,38 @@ ul, li, a
   text-decoration: none
   list-style: none
 
-.top-menu-and-signs__sign
-  font-family: Conv_Plumb
-  font-style: italic
-  text-transform: uppercase
-
-.top-menu-and-signs__sign--red
-  color: #f5135c
-
-.top-menu-and-signs__sign--white
-  color: #fff
-
-.top-menu-and-signs__sign--d_grey
-  color: #383838
-
-.top-nav-menu-block
-  height: 2.375rem //38px
-  background-color: #fff
-  font-size: 1.125rem
-  opacity: .8
-  width: 100%
-  box-shadow: 0 3px 10px black
+.container-advertise__middle-w-photo 
+  width: 92.57%//72.5rem 1160px
+  margin: 0 auto
   display: flex
-  justify-content: center
-  align-items: center
-  
-.nav-menu 
-  width: 71.125rem
-  display: flex
-  justify-content: space-around
+  justify-content: space-between
+  flex-wrap: wrap
 
-.nav-menu__element
-  flex-grow: 1
-  text-align: center
-  position: relative
-  border-right: 1px solid
-  border-image: linear-gradient(to bottom, white 0%, black 50%, white 100%) 1
+.container-advertise__photo 
+  flex: 0 1 44%
+  text-align: right
 
-.nav-menu__element--triangle-menu
-  position: absolute
-  font-size: 0.6em
-  top: 0.5em
-  padding-left: 0.6em
+.container-advertise__photo img
+  max-width: 100%
+  padding-right: 35px
+
+@media screen and (max-width: $width-when-adjust) 
+  .container-advertise__photo 
+    flex: 0 1 99%
+    text-align: center
+  .container-advertise__photo img
+    max-width: 100%
+
+.container-advertise__about 
+  flex: 1 0
+  padding-left: 0.9375rem//15px
 
 
-.nav-menu__element:first-child
-  border-left: .5px solid
-  border-image: linear-gradient(to bottom, white 0%, black 50%, white 100%) 1
-.nav-menu > .nav-menu__element
+.container-advertise__about p
+  font-weight: bold
+  line-height: 1.5rem
 
-.nav-menu__element a
-  padding: 0 2.5em 0 2.5em
-
-.nav-menu__element a:hover
-  border-bottom: 2px solid
+.container-advertise__about li
+  list-style-image: url(/img/tick.png)
+  list-style-position: inside
+  line-height: 1.5rem

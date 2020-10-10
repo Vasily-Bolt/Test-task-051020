@@ -242,6 +242,10 @@ ul, li, a {
   padding-left: 0.6em;
 }
 
+.nav-menu__qaa:hover {
+  color: red;
+}
+
 .nav-menu__element:first-child {
   border-left: .5px solid;
   -o-border-image: linear-gradient(to bottom, white 0%, black 50%, white 100%) 1;
@@ -255,6 +259,10 @@ ul, li, a {
 
 .nav-menu__element a:hover {
   border-bottom: 2px solid;
+}
+
+.sub-menu {
+  display: none;
 }
 
 .main-top-snils__text-block {
@@ -322,51 +330,75 @@ ul, li, a {
 }
 
 .container-advertise__middle-info {
-  padding-top: 1.8rem;
+  padding-top: 1.6875rem;
   padding-left: 0.3125rem;
   width: 81.5%;
   line-height: 1.5rem;
 }
 
 .container-advertise__middle-w-photo {
-  padding-top: 2.60rem;
-  height: 19.6875rem;
-  width: 69.5rem;
+  width: 92.57%;
+  margin-top: 2.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .container-advertise__photo {
-  padding-left: 0.3125rem;
-  width: 27.5rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 44%;
+          flex: 0 1 44%;
+  text-align: right;
+}
+
+.container-advertise__photo img {
+  max-width: 100%;
+  padding-right: 6.29%;
+}
+
+@media screen and (max-width: 1200px) {
+  .container-advertise__photo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 99%;
+            flex: 0 1 99%;
+    text-align: center;
+  }
+  .container-advertise__photo img {
+    max-width: 100%;
+  }
 }
 
 .container-advertise__about {
-  width: 38.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
   text-align: left;
-  padding-top: 10px;
+  padding: 0.711% 4.8% 0 1.185%;
+  line-height: 1.5rem;
 }
 
 .container-advertise__about p {
   font-weight: bold;
-  line-height: 1.5rem;
+}
+
+.container-advertise__about ul {
+  padding-left: 2.5em;
+  padding-top: 0.125em;
 }
 
 .container-advertise__about li {
-  width: 90%;
-  margin-top: .8rem;
-  padding: .75rem 0 0 2.375rem;
-  line-height: 1.5rem;
-  background: url(/img/tick.png) no-repeat;
+  padding-top: 0.8125em;
+  list-style-image: url(/img/tick.png);
 }
 
 .container-advertise__low-info {
   padding-right: 3px;
-  padding-top: 2.8125rem;
+  padding-top: 2.9375em;
   width: 64rem;
 }
 

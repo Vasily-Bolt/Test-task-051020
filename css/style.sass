@@ -118,6 +118,8 @@ ul, li, a
   top: 0.5em
   padding-left: 0.6em
 
+.nav-menu__qaa:hover
+  color: red
 
 .nav-menu__element:first-child
   border-left: .5px solid
@@ -130,7 +132,8 @@ ul, li, a
 .nav-menu__element a:hover
   border-bottom: 2px solid
 
-
+.sub-menu
+  display: none
 
 .main-top-snils__text-block
   position: absolute
@@ -183,44 +186,53 @@ ul, li, a
     letter-spacing: .1px
 
 .container-advertise__middle-info 
-    padding-top: 1.8rem
+    padding-top: 1.6875rem//27px
     padding-left: 0.3125rem
     width: 81.5%
     line-height: 1.5rem
 
 .container-advertise__middle-w-photo 
-    padding-top: 2.60rem
-    height: 19.6875rem
-    width: 69.5rem
-    display: flex
-    justify-content: space-between
+  width: 92.57%//72.5rem 1160px
+  margin-top: 2.625rem//42px
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
 
 .container-advertise__photo 
-    padding-left: 0.3125rem
-    width: 27.5rem
+  flex: 0 1 44%
+  text-align: right
+
+.container-advertise__photo img
+  max-width: 100%
+  padding-right: 6.29%//35px
+
+@media screen and (max-width: $width-when-adjust) 
+  .container-advertise__photo 
+    flex: 0 1 99%
+    text-align: center
+  .container-advertise__photo img
+    max-width: 100%
 
 .container-advertise__about 
-    width: 38.5rem
-    text-align: left
-    padding-top: 10px
+  flex: 1 0
+  text-align: left
+  padding: 0.711% 4.8% 0 1.185%//0.9375rem
+  line-height: 1.5rem
 
 .container-advertise__about p
-    font-weight: bold
-    line-height: 1.5rem
+  font-weight: bold
 
+.container-advertise__about ul
+  padding-left: 2.5em//40px
+  padding-top: 0.125em//2px
 .container-advertise__about li
-    width: 90%
-    margin-top: .8rem
-    padding: .75rem 0 0 2.375rem
-    line-height: 1.5rem
-    background: url(/img/tick.png) no-repeat /* Параметры фона */
+  padding-top: 0.8125em//13px
+  list-style-image: url(/img/tick.png)
 
 .container-advertise__low-info 
     padding-right: 3px
-    padding-top: 2.8125rem
+    padding-top: 2.9375em//47px
     width: 64rem
-
-.container-advertise__low-info p
 
 .container-advertise__low-info--now-you-understand 
     font-size: 1.125rem
