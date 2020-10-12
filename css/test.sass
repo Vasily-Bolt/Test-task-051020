@@ -5,14 +5,14 @@ $fontadaptive: 1rem
 $width-when-adjust: 1200px //Ширина экрана, когда начинается адаптив
 $top-info-block-padding-fixed: 7.5px 215px
 $top-info-block-padding-adjustable: 8px 1vw
-$top-menu-padding-of-each-elem: 66px
+$top-menu-padding-of-each-elem: 1rem
 
 @import fonts
 
 html 
-  font-size: 16px
+    font-size: 16px
 
-@media screen and (max-width: $width-when-adjust) 
+@media screen and (max-width: 1200px) 
   html
     font-size: 1.5vw
 
@@ -20,19 +20,180 @@ html
 body
   max-width: 1366px
   margin: 0 auto
-  display: flex
-  justify-content: center
-  align-content: center
-p, ul, li, a
+p, ol, ul, li, a
   margin: 0
   padding: 0
 ul, li, a
   text-decoration: none
   list-style: none
 
+.top-info-block
+  @media screen and (min-width: $width-when-adjust)
+    padding: $top-info-block-padding-fixed
+  @media screen and (max-width: $width-when-adjust)
+    padding: $top-info-block-padding-adjustable
+  background: #484848
+
+.top-menu-and-signs
+  display: flex
+  justify-content: space-between
+  @media screen and (min-width: $width-when-adjust)
+    font-size: $font17px
+  @media screen and (max-width: $width-when-adjust)
+    font-size: $fontadaptive
+
+.top-menu-and-signs__sign
+  font-family: Conv_Plumb
+  font-style: italic
+  text-transform: uppercase
+
+.top-menu-and-signs__sign--red
+  color: #f5135c
+
+.top-menu-and-signs__sign--white
+  color: #fff
+
+.top-menu-and-signs__sign--d_grey
+  color: #383838
+
+.top-emblem-block
+  height: 5.8725rem//94px
+  padding-right: 22px
+  background: linear-gradient(to top, #44567f 0%, #718fb2 100%)
+  display: flex
+  justify-content: center
+  align-items: center
+.emblem-block
+  box-sizing: border-box
+  width: 15.625rem //250px
+  display: flex
+  justify-content: space-between
+.emblem-block__emblem
+  width: 3rem //48px
+  height: 3.625rem//58px
+  background: url('/img/cubic.png') top right no-repeat
+  background-size: cover
+.emblem-block__sign
+  padding-top: 0.25rem //4px
+  font-family: Conv_Trebuchet MS
+  font-weight: bold
+  font-size: 2.6 * $font17px
+  text-transform: uppercase
+  letter-spacing: 1px
+
+.main-top-snils
+  position: relative
+  height: 37.5vw
+  max-height: 522px
+  background: url("/img/top-image.png") top center no-repeat
+  background-size: 100%
+  overflow: hidden
+  
+.top-nav-menu-block
+  height: 2.375rem //38px
+  background-color: #fff
+  font-size: 1.125rem
+  opacity: .8
+  width: 100%
+  box-shadow: 0 3px 10px black
+  display: flex
+  justify-content: center
+  align-items: center
+  
+.nav-menu 
+  width: 71.125rem
+  display: flex
+  justify-content: space-around
+
+.nav-menu__element
+  flex-grow: 1
+  text-align: center
+  position: relative
+  border-right: 1px solid
+  border-image: linear-gradient(to bottom, white 0%, black 50%, white 100%) 1
+
+.nav-menu__element--triangle-menu
+  position: absolute
+  font-size: 0.6em
+  top: 0.5em
+  padding-left: 0.6em
+
+.nav-menu__qaa:hover
+  color: red
+
+.nav-menu__element:first-child
+  border-left: .5px solid
+  border-image: linear-gradient(to bottom, white 0%, black 50%, white 100%) 1
+.nav-menu > .nav-menu__element
+
+.nav-menu__element a
+  padding: 0 2.5em 0 2.5em
+
+.nav-menu__element a:hover
+  border-bottom: 2px solid
+
+.sub-menu
+  display: none
+
+.main-top-snils__text-block
+  position: absolute
+  /*bottom: 4.215%;*/
+  top: 80.785%
+  height: 15%
+  width: 100%
+  background-color: #fdfdfd
+  opacity: .2
+    
+
+///*.free-space-block {
+//    padding-top:28.1%; 
+//*/
+
+
+.main-top-snils__text-block--text 
+  position: absolute
+  top: 85.05%//444px
+  right: 6.4375rem//103px
+  text-align: right
+  letter-spacing: .1px
+  font-size: $fontBig
+  text-shadow: 0 1px 3px black
+
+
+.container-advertise
+    @media screen and (min-width: $width-when-adjust)
+      padding-top: 3.875rem
+    @media screen and (max-width: $width-when-adjust)
+      padding: 1rem
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.container-advertise--font 
+    font-size: 1rem
+    font-family: Conv_Trebuchet MS
+    text-align: center
+
+.container-advertise__top-rect 
+    width: 85.0%
+    height: 3.1875rem
+    background-color: #f5135c
+
+.container-advertise__top-rect--text 
+    font-size: 1.8125rem
+    padding-top: .625rem
+    padding-left: 6px
+    letter-spacing: .1px
+
+.container-advertise__middle-info 
+    padding-top: 1.6875rem//27px
+    padding-left: 0.3125rem
+    width: 81.5%
+    line-height: 1.5rem
+
 .container-advertise__middle-w-photo 
   width: 92.57%//72.5rem 1160px
-  margin: 0 auto
+  margin-top: 2.625rem//42px
   display: flex
   justify-content: space-between
   flex-wrap: wrap
@@ -43,7 +204,7 @@ ul, li, a
 
 .container-advertise__photo img
   max-width: 100%
-  padding-right: 35px
+  padding-right: 6.29%//35px
 
 @media screen and (max-width: $width-when-adjust) 
   .container-advertise__photo 
@@ -54,14 +215,136 @@ ul, li, a
 
 .container-advertise__about 
   flex: 1 0
-  padding-left: 0.9375rem//15px
-
+  text-align: left
+  padding: 0.711% 4.8% 0 1.185%//0.9375rem
+  line-height: 1.5rem
 
 .container-advertise__about p
   font-weight: bold
-  line-height: 1.5rem
 
+.container-advertise__about ul
+  padding-left: 2.5em//40px
+  padding-top: 0.125em//2px
 .container-advertise__about li
+  padding-top: 0.8125em//13px
   list-style-image: url(/img/tick.png)
-  list-style-position: inside
-  line-height: 1.5rem
+
+.container-advertise__low-info 
+    padding-right: 3px
+    padding-top: 2.9375em//47px
+    width: 64rem
+
+.container-advertise__low-info--now-you-understand 
+    font-size: 1.125rem
+    text-transform: uppercase
+
+.where-and-what-container
+  background: url("/img/where-and-when-v2-blank.png") top center no-repeat
+  width: 100%
+  height: 1065px
+  font-size: 1rem
+  font-family: Conv_Trebuchet MS
+  text-align: center
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex-direction: column
+
+.where-and-what-top
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column 
+
+.where-and-what-top__now-you-understand
+  width: 1090px
+  padding-top: 40px
+  line-height: 1.5em
+
+.where-and-what-top__where-and-when
+  display: flex
+  justify-content: center
+  height: 87px
+  padding-top: 37px
+
+.where-and-when-rect
+  position: relative
+  
+.where-and-when-rect__trapezoid
+  border-top: 85px solid #5e7599
+  border-left: 85px solid transparent
+  border-right: 85px solid transparent
+  height: 0
+  width: 410px
+.where-and-when-rect__top-line
+  position: absolute
+  top: 4px
+  left: -20px
+  width: 620px
+  border: 1px solid #ffffff
+.where-and-when-rect__sign
+  position: absolute
+  top: 5px
+  left: 57px
+  p
+    font-size: 48px
+    letter-spacing: 0.005em
+.where-and-when-rect__low-line
+  position: absolute
+  top: 79px
+  left: 42px
+  width: 496px
+  border: 1px solid #ffffff
+.type-of-work-cont
+  display: flex
+  justify-content: space-between
+  padding-top: 16px
+  padding-right: 10px
+  width: 1140px
+.type-of-work
+  flex: 0 0 49%
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex-direction: column
+.type-of-work__pic 
+  width: 165px
+  height: 165px
+  border-radius: 50%
+  overflow: hidden
+  img
+    margin-left: -30px
+.type-of-work__title
+  width: 500px
+  font-size: 1.8125rem
+  letter-spacing: 0.02em
+  padding-top: 34px
+
+.type-of-work__text
+  width: 410px
+  letter-spacing: 0.025em
+  font-size: $font17px
+  padding-top: 22px
+  line-height: 1.6em
+  p
+    text-indent: 1.8em
+  ol
+    list-style-type: none
+    counter-reset: item
+  li:before
+    content: counter(item) ') '
+    counter-increment: item
+    
+.where-and-what-bottom
+.where-and-what-bottom__grands-img
+  $hw-of-pic: 361px
+  width: $hw-of-pic
+  height: $hw-of-pic
+  border-radius: 50%
+  overflow: hidden
+  img
+    margin-left: -100px
+.where-and-what-bottom__if-youve-question
+.feedback-form
+.feedback-form__title
+.feedback-form_submit-form
