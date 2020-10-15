@@ -2,7 +2,9 @@ $font17px: 1.0625rem
 $FontForMenu: 1.125rem //18px
 $fontBig: 1.8125rem //29px
 $fontadaptive: 1rem
-$width-when-adjust: 1200px //Ширина экрана, когда начинается адаптив
+$width-when-adjust: 1280px //Ширина экрана, когда начинается адаптив
+$width-when-adjust-smaller: 750px //Ширина экрана, когда начинается жёсткий адаптив
+$width-when-adjust-tiny: 250px //Для совсем маленьких
 $top-info-block-padding-fixed: 7.5px 215px
 $top-info-block-padding-adjustable: 8px 1vw
 $top-menu-padding-of-each-elem: 1rem
@@ -186,7 +188,7 @@ ul, li, a
     letter-spacing: .1px
 
 .container-advertise__middle-info 
-    padding-top: 1.6875rem//27px
+    padding-top: 1.8125rem//29px
     padding-left: 0.3125rem
     width: 81.5%
     line-height: 1.5rem
@@ -241,12 +243,15 @@ ul, li, a
 .where-and-what-container
   background: url("/img/where-and-when-v2-blank.png") top center no-repeat
   width: 100%
+  margin-top: 5.5rem//88px
   height: 1065px
   font-size: 1rem
-  font-family: Conv_Trebuchet MS
+  font-family: "Conv_Trebuchet MS"
   text-align: center
   display: flex
   justify-content: flex-start
+  @media screen and (max-width: $width-when-adjust)
+    justify-content: space-between
   align-items: center
   flex-direction: column
 
@@ -257,56 +262,79 @@ ul, li, a
   flex-direction: column 
 
 .where-and-what-top__now-you-understand
-  width: 1090px
-  padding-top: 40px
+  width: 79.79%//1090px
+  padding-top: 2.5rem//40px
   line-height: 1.5em
+  @media screen and (max-width: $width-when-adjust)
+    padding-top: 0
+    width: 100%
 
 .where-and-what-top__where-and-when
   display: flex
   justify-content: center
-  height: 87px
-  padding-top: 37px
+  height: 5.4375rem//87px
+  padding-top: 2.3125rem//37px
+  width: 42.46%
+  @media screen and (max-width: $width-when-adjust)
+    padding: 0
 
-.where-and-when-rect
+.where-and-when-rect 
   position: relative
+  width: 100%
   
-.where-and-when-rect__trapezoid
-  border-top: 85px solid #5e7599
-  border-left: 85px solid transparent
-  border-right: 85px solid transparent
+.where-and-when-rect__trapezoid //580x85
+  border-top: 5.3125rem solid #5e7599 //85px
+  border-left: 5.3125rem solid transparent
+  border-right: 5.3125rem solid transparent
   height: 0
-  width: 410px
+  width: 70.69%//410px
+
+
 .where-and-when-rect__top-line
   position: absolute
-  top: 4px
-  left: -20px
-  width: 620px
+  top: 4.70%//4px
+  left: -3.45%//-20px
+  width: 106.896%//620px
   border: 1px solid #ffffff
 .where-and-when-rect__sign
   position: absolute
-  top: 5px
-  left: 57px
+  top: 5.88%//5px
+  left: 9.827%//57px
   p
-    font-size: 48px
+    font-size: 3rem
     letter-spacing: 0.005em
+  @media screen and (max-width: $width-when-adjust)
+    p
+      font-size: 2.5rem
 .where-and-when-rect__low-line
   position: absolute
-  top: 79px
-  left: 42px
-  width: 496px
+  top: 90.804%//79px
+  left: 7.24%//42px
+  width: 85.517%//496px
   border: 1px solid #ffffff
 .type-of-work-cont
   display: flex
   justify-content: space-between
-  padding-top: 16px
-  padding-right: 10px
-  width: 1140px
+  padding-top: 1.172%//16px
+  padding-right: .732%//10px
+  width: 83.455%//1140px
+@media screen and (max-width: $width-when-adjust)
+  .type-of-work-cont
+    align-items: space-between
+    width: 100%
+    flex-wrap: wrap
+
 .type-of-work
   flex: 0 0 49%
+  @media screen and (max-width: $width-when-adjust-smaller)
+    flex: 0 0 99%
+    padding-top: 2rem
+
   display: flex
   justify-content: flex-start
   align-items: center
   flex-direction: column
+
 .type-of-work__pic 
   width: 165px
   height: 165px
@@ -315,36 +343,305 @@ ul, li, a
   img
     margin-left: -30px
 .type-of-work__title
-  width: 500px
+  width: 89.52%//500px
   font-size: 1.8125rem
   letter-spacing: 0.02em
-  padding-top: 34px
+  padding-top: 2.125rem//34px
+  padding-left: 1%//5px
+@media screen and (min-width: $width-when-adjust)
+  .type-of-work__title--cheater
+    padding-left: 2.75rem//44px
 
 .type-of-work__text
-  width: 410px
-  letter-spacing: 0.025em
+  width: 69.82%//390px
   font-size: $font17px
-  padding-top: 22px
+  @media screen and (max-width: $width-when-adjust-smaller)
+    font-size: 1.5rem
+  padding-top: 1.375rem//22px
+  padding-left: 2.69%//15px
   line-height: 1.6em
   p
-    text-indent: 1.8em
+    text-indent: 1.1em
   ol
     list-style-type: none
     counter-reset: item
   li:before
     content: counter(item) ') '
     counter-increment: item
-    
+@media screen and (min-width: $width-when-adjust)
+  .type-of-work__text--cheater
+    width: 64.45%//360px
+    margin-left: 3.58%//20px
+
 .where-and-what-bottom
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  width: 86.457%//1181px
+  margin-top: 3.125rem//50px
+  @media screen and (max-width: $width-when-adjust)
+    width: 99%
+
+$hw-of-pic: 365px
 .where-and-what-bottom__grands-img
-  $hw-of-pic: 361px
-  width: $hw-of-pic
+  flex: 0 0 $hw-of-pic
   height: $hw-of-pic
+  border: 3px solid #fff
   border-radius: 50%
+  box-shadow: 0 2px 5px black
   overflow: hidden
+  margin-top: -1px
+  @media screen and (max-width: $width-when-adjust)
+    flex: 0 0 $hw-of-pic/1.5
+    height: $hw-of-pic/1.5
+    margin-top: 2rem
+  @media screen and (max-width: $width-when-adjust-smaller)
+    margin: 0 auto
+    margin-left: 15%
+  @media screen and (max-width: $width-when-adjust-tiny)
+    margin-left: 0
   img
-    margin-left: -100px
+    margin-left: -65px
+    margin-top: -5px
+    @media screen and (max-width: $width-when-adjust)
+      width: $hw-of-pic
+      margin-left: -65px
+
+
+      
+
 .where-and-what-bottom__if-youve-question
+  flex: 0 1 23.709%//280px
+  padding-left: 3.896%//46px
+  padding-bottom: 0.9375rem//15px
+  line-height: 1.2em
+  font-size: 1.875rem//30px
+  text-align: left
+
 .feedback-form
+  flex: 0 0 24.133%//285px
+  box-sizing: border-box
+  height: 22.0625rem//353px
+  margin-top: 0.3125rem//5px
+  position: relative
+.feedback-form__outer-rect
+  height: 100%
+  margin: 0 auto
+  border: 1px solid #828383
+  background-color: #fff
+  opacity: .4
+.feedback-form__inner-rect
+  position: absolute
+  width: 95.44%//272px
+  height: 20.8125rem//333px
+  margin-top: -21.5625rem//-345px
+  margin-left: 2.205%//6px
+  background-color: #fff
+  border: 1px solid #828383
+  opacity: .6
+  box-sizing: border-box
+.feedback-form__form  
+  position: absolute
+  width: 95.44%//272px
+  height: 20.8125rem//333px
+  margin-left: 2.81%//8px
+  margin-top: -21.75rem//-348px
 .feedback-form__title
-.feedback-form_submit-form
+  width: 53.31%//145px
+  margin-left: 22.06%//60px
+  margin-top: 1.75rem//28px
+.feedback-form__title--text
+  font-weight: bold
+  font-family: "Trebuchet MS"
+  text-transform: uppercase
+  font-size: 1.125rem//18px
+  line-height: 1.35em
+  color: #56575b
+
+.feedback-form__submit-form
+  width: 90.08%//245px
+  border-top: 1px solid #98a1b0
+  margin: 0 auto
+  margin-top: 0.375rem//6px
+  padding-top: 0.75rem//12px
+  .input, .textarea
+    box-sizing: border-box
+    font-family: "Conv_Trebuchet MS"
+    font-size: 0.875rem//14px
+    color: #969494
+    font-style: italic
+    border: 1px solid #919aa9
+    width: 97.959%//240px
+    padding-left: 2.857%//7px
+    padding-bottom: 0.1857%//3px
+  .input
+    height: 1.858em//26px
+    margin-bottom: 0.786em//11px
+  .textarea
+    height: 6.929em//97px
+
+
+.feedback-form__submit-button
+  font-size: .8125rem//13px
+  width: 71.02%//174px
+  height: 2.23em//29px
+  margin-top: .625em//10px
+  margin-left: -.3125em//-5px
+  color: #fff
+  border: none
+  border-radius: 3px
+  box-shadow: 0 -3px 1px #bccad8
+  background: linear-gradient(to top, #455478 0%, #7892b0 100%)
+.feedback-form__submit-button:hover
+    background: linear-gradient(to top, #576f95 0%, #9aabc5 100%)
+.feedback-form__submit-button:active
+    background: linear-gradient(to top, #122646 0%, #20427a 100%)
+
+
+
+.snils-info
+  font-size: $font17px
+  color: #2d2d2d
+  font-family: "Trebuchet MS"
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+.snils-info__photo
+  width: 900px
+  font-family: sans-serif
+  font-size: .9375em
+  img
+    width: 100%
+  p:first-letter
+    text-transform: uppercase
+.snils-info__pers-data
+  position: absolute
+  width: 115px
+  height: 64px
+  top: 75px
+  left: 238px
+.snils-info__ins-nomber
+  position: absolute
+  width: 185px
+  height: 100px
+  top: 60px
+  right: 250px
+.snils-info__date-of-registry
+  position: absolute
+  width: 200px
+  height: 120px
+  top: 200px
+  right: 260px
+.snils-info__about-lost
+  width: 1100px
+  p
+    text-align: center
+    position: relative
+
+.footer
+  margin-top: 50px
+  height: 25.1875rem//403px
+  background: url("/img/footer-background.png") no-repeat
+  display: flex
+  flex-direction: column
+  align-items: center
+.menu-cont
+  flex: 0 1 13.15%//3.3125rem//53px
+  font-size: 1rem//16px
+  color: #ffffff
+  font-family: "Trebuchet MS"
+  text-transform: uppercase
+  width: 86.531%//1182px
+  border-bottom: 1px solid #597aa7
+.nav-menu--footer
+  width: 90.017%//1064px
+  padding-top: 13px
+  margin: 0 auto
+.nav-menu__element--footer
+  border-right: 1px solid white
+  border-image: none
+  padding: 0.3125rem 0 //5px
+.nav-menu__element--footer:first-child
+  border-left: 1px solid white
+  border-image: none
+
+
+.middle-cont
+  flex: 1 1 auto
+  width: 95.17%//1300px
+  display: flex
+  justify-content: space-between
+.footer-form-cont
+  padding-top: 40px
+  flex: 0 1 38.846%
+  border: 1px solid #000
+  margin: 0 auto
+.footer-form-cont__title
+  padding-left: 17px
+  font-family: "Trebuchet MS"
+  font-size: .875rem//14px
+  color: #ffffff
+  text-transform: uppercase
+  width: 320px
+.footer-submit-form
+  position: relative
+  height: 100px
+  margin-top: 15px
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  flex-wrap: wrap
+  .input, .textarea
+    box-sizing: border-box
+    width: 246px
+    padding-left: 1rem
+    font-family: "Conv_Plumb"
+    font-style: italic
+    font-size: 1.0625rem//17px
+    color: #969494
+    border: 1px solid #60718a
+  .input
+    height: 27px
+  .textarea
+    align-self: flex-end
+.footer-submit-form__button
+  position: absolute
+  top: 129px
+  left: 2px
+  font-size: 13px
+  text-transform: uppercase
+  height: 40px
+  width: 155px
+  color: #ffffff
+  background-color: #eb2b69
+  font-family: "Trebuchet MS"
+  border: none
+  border-radius: 5px
+  &:hover
+    color: black
+
+.emblem-phone-cont
+  border: 1px solid #000
+  flex: 0 1 50%
+  color: #fff
+  font-family: "Plumb Condensed"
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+.emblem-phone-cont__emblem-block
+
+.emblem-phone-cont__phone-prefx
+  font-size: 22px
+.emblem-phone-cont__phone-body  
+  font-size: 30px
+.low-cont
+  flex: 0 0 60px
+  width: 65.375%//895px
+
+.top-menu-and-signs__sign--footer
+  font-size: 21px
+
+  
