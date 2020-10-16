@@ -965,7 +965,6 @@ ul, li, a {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 38.846%;
           flex: 0 1 38.846%;
-  border: 1px solid #000;
   margin: 0 auto;
 }
 
@@ -1037,12 +1036,11 @@ ul, li, a {
 }
 
 .emblem-phone-cont {
-  border: 1px solid #000;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
   color: #fff;
-  font-family: "Plumb Condensed";
+  font-family: "Conv_Plumb";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1055,19 +1053,38 @@ ul, li, a {
           align-items: flex-end;
 }
 
+.emblem-phone-cont__emblem-block {
+  margin-right: 90px;
+  margin-top: 30px;
+}
+
+.emblem-phone-cont__phone-block {
+  font-style: italic;
+  margin-right: 95px;
+  margin-top: 8px;
+}
+
+.emblem-phone-cont__phone-country {
+  padding-right: 1px;
+  padding-top: 1px;
+}
+
 .emblem-phone-cont__phone-prefx {
-  font-size: 22px;
+  font-size: 30px;
 }
 
 .emblem-phone-cont__phone-body {
-  font-size: 30px;
+  font-style: italic;
+  font-size: 36px;
+  padding-left: 5px;
 }
 
 .low-cont {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 60px;
-          flex: 0 0 60px;
+      -ms-flex: 0 0 55px;
+          flex: 0 0 55px;
   width: 65.375%;
+  padding-left: 1px;
 }
 
 .top-menu-and-signs__sign--footer {

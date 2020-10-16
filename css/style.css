@@ -655,7 +655,7 @@ ul, li, a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 86.457%;
-  margin-top: 3.125rem;
+  margin-top: 3.4375rem;
 }
 
 @media screen and (max-width: 1280px) {
@@ -674,7 +674,6 @@ ul, li, a {
   -webkit-box-shadow: 0 2px 5px black;
           box-shadow: 0 2px 5px black;
   overflow: hidden;
-  margin-top: -1px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -851,6 +850,7 @@ ul, li, a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5.3125rem;
 }
 
 .snils-info__photo {
@@ -873,30 +873,227 @@ ul, li, a {
   height: 64px;
   top: 75px;
   left: 238px;
+  line-height: 1.2em;
 }
 
 .snils-info__ins-nomber {
   position: absolute;
   width: 185px;
   height: 100px;
-  top: 60px;
-  right: 250px;
+  top: 52px;
+  right: 249px;
+  line-height: 1.2em;
 }
 
 .snils-info__date-of-registry {
   position: absolute;
   width: 200px;
   height: 120px;
-  top: 200px;
-  right: 260px;
+  top: 191px;
+  right: 233px;
+  line-height: 1.25em;
 }
 
 .snils-info__about-lost {
   width: 1100px;
+  margin-top: 75px;
+  margin-left: -5px;
 }
 
 .snils-info__about-lost p {
   text-align: center;
   position: relative;
+  line-height: 1.6em;
+}
+
+.footer {
+  margin-top: 83px;
+  height: 25.1875rem;
+  background: url("/img/footer-background.png") no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-cont {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 13.15%;
+          flex: 0 1 13.15%;
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: "Trebuchet MS";
+  text-transform: uppercase;
+  width: 86.531%;
+  border-bottom: 1px solid #597aa7;
+}
+
+.nav-menu--footer {
+  width: 90.017%;
+  padding-top: 13px;
+  margin: 0 auto;
+}
+
+.nav-menu__element--footer {
+  border-right: 1px solid white;
+  -o-border-image: none;
+     border-image: none;
+  padding: 0.3125rem 0;
+}
+
+.nav-menu__element--footer:first-child {
+  border-left: 1px solid white;
+  -o-border-image: none;
+     border-image: none;
+}
+
+.middle-cont {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 95.17%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-form-cont {
+  padding-top: 40px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 38.846%;
+          flex: 0 1 38.846%;
+  margin: 0 auto;
+}
+
+.footer-form-cont__title {
+  padding-left: 17px;
+  font-family: "Trebuchet MS";
+  font-size: .875rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  width: 320px;
+}
+
+.footer-submit-form {
+  position: relative;
+  height: 100px;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer-submit-form .input, .footer-submit-form .textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 246px;
+  padding-left: 1rem;
+  font-family: "Conv_Plumb";
+  font-style: italic;
+  font-size: 1.0625rem;
+  color: #969494;
+  border: 1px solid #60718a;
+}
+
+.footer-submit-form .input {
+  height: 27px;
+}
+
+.footer-submit-form .textarea {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.footer-submit-form__button {
+  position: absolute;
+  top: 129px;
+  left: 2px;
+  font-size: 13px;
+  text-transform: uppercase;
+  height: 40px;
+  width: 155px;
+  color: #ffffff;
+  background-color: #eb2b69;
+  font-family: "Trebuchet MS";
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-submit-form__button:hover {
+  color: black;
+}
+
+.emblem-phone-cont {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  color: #fff;
+  font-family: "Conv_Plumb";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.emblem-phone-cont__emblem-block {
+  margin-right: 90px;
+  margin-top: 30px;
+}
+
+.emblem-phone-cont__phone-block {
+  font-style: italic;
+  margin-right: 95px;
+  margin-top: 8px;
+}
+
+.emblem-phone-cont__phone-country {
+  padding-right: 1px;
+  padding-top: 1px;
+}
+
+.emblem-phone-cont__phone-prefx {
+  font-size: 30px;
+}
+
+.emblem-phone-cont__phone-body {
+  font-style: italic;
+  font-size: 36px;
+  padding-left: 5px;
+}
+
+.low-cont {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 55px;
+          flex: 0 0 55px;
+  width: 65.375%;
+  padding-left: 1px;
+}
+
+.top-menu-and-signs__sign--footer {
+  font-size: 21px;
 }
 /*# sourceMappingURL=style.css.map */
