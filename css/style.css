@@ -369,7 +369,10 @@ ul, li, a {
     text-align: center;
   }
   .container-advertise__photo img {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -394,6 +397,12 @@ ul, li, a {
 .container-advertise__about li {
   padding-top: 0.8125em;
   list-style-image: url(/img/tick.png);
+}
+
+@media screen and (max-width: 1280px) {
+  .container-advertise__about li {
+    font-size: 1.5rem;
+  }
 }
 
 .container-advertise__low-info {
@@ -583,9 +592,11 @@ ul, li, a {
 }
 
 .type-of-work__pic {
-  width: 165px;
-  height: 165px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px #3e3e3e;
+          box-shadow: 0 0 10px #3e3e3e;
   overflow: hidden;
 }
 
@@ -693,7 +704,7 @@ ul, li, a {
   }
 }
 
-@media screen and (max-width: 250px) {
+@media screen and (max-width: 470px) {
   .where-and-what-bottom__grands-img {
     margin-left: 0;
   }
@@ -720,6 +731,12 @@ ul, li, a {
   line-height: 1.2em;
   font-size: 1.875rem;
   text-align: left;
+}
+
+@media screen and (max-width: 750px) {
+  .where-and-what-bottom__if-youve-question {
+    display: none;
+  }
 }
 
 .feedback-form {
@@ -850,17 +867,21 @@ ul, li, a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 5.3125rem;
+  margin-top: 5.125rem;
 }
 
 .snils-info__photo {
-  width: 900px;
+  position: relative;
+  width: 65.885%;
   font-family: sans-serif;
-  font-size: .9375em;
+  font-size: 1rem;
 }
 
 .snils-info__photo img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .snils-info__photo p:first-letter {
@@ -869,35 +890,35 @@ ul, li, a {
 
 .snils-info__pers-data {
   position: absolute;
-  width: 115px;
-  height: 64px;
-  top: 75px;
-  left: 238px;
-  line-height: 1.2em;
+  width: 12.777%;
+  height: 4.266em;
+  top: 24.5%;
+  left: .5%;
+  line-height: 1.25em;
 }
 
 .snils-info__ins-nomber {
   position: absolute;
-  width: 185px;
-  height: 100px;
-  top: 52px;
-  right: 249px;
+  width: 20.555%;
+  height: 6.25em;
+  top: 18%;
+  right: 1.7%;
   line-height: 1.2em;
 }
 
 .snils-info__date-of-registry {
   position: absolute;
-  width: 200px;
-  height: 120px;
-  top: 191px;
-  right: 233px;
+  width: 22.22%;
+  height: 8em;
+  top: 62%;
+  right: .1%;
   line-height: 1.25em;
 }
 
 .snils-info__about-lost {
-  width: 1100px;
-  margin-top: 75px;
-  margin-left: -5px;
+  width: 80.527%;
+  margin-top: 4.6875rem;
+  margin-left: -0.45%;
 }
 
 .snils-info__about-lost p {
@@ -907,7 +928,7 @@ ul, li, a {
 }
 
 .footer {
-  margin-top: 83px;
+  margin-top: 5.3125rem;
   height: 25.1875rem;
   background: url("/img/footer-background.png") no-repeat;
   display: -webkit-box;
@@ -934,10 +955,22 @@ ul, li, a {
   border-bottom: 1px solid #597aa7;
 }
 
+@media screen and (max-width: 750px) {
+  .menu-cont {
+    width: 99%;
+  }
+}
+
 .nav-menu--footer {
   width: 90.017%;
-  padding-top: 13px;
+  padding-top: 0.8125rem;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 750px) {
+  .nav-menu--footer {
+    width: 99%;
+  }
 }
 
 .nav-menu__element--footer {
@@ -967,7 +1000,7 @@ ul, li, a {
 }
 
 .footer-form-cont {
-  padding-top: 40px;
+  padding-top: 2.5rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 38.846%;
           flex: 0 1 38.846%;
@@ -975,18 +1008,18 @@ ul, li, a {
 }
 
 .footer-form-cont__title {
-  padding-left: 17px;
+  padding-left: 3.366%;
   font-family: "Trebuchet MS";
   font-size: .875rem;
   color: #ffffff;
   text-transform: uppercase;
-  width: 320px;
+  width: 65%;
 }
 
 .footer-submit-form {
   position: relative;
-  height: 100px;
-  margin-top: 15px;
+  height: 6.25rem;
+  margin-top: 0.9375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1004,7 +1037,7 @@ ul, li, a {
 .footer-submit-form .input, .footer-submit-form .textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 246px;
+  width: 48.81%;
   padding-left: 1rem;
   font-family: "Conv_Plumb";
   font-style: italic;
@@ -1014,7 +1047,7 @@ ul, li, a {
 }
 
 .footer-submit-form .input {
-  height: 27px;
+  height: 1.6875rem;
 }
 
 .footer-submit-form .textarea {
@@ -1024,12 +1057,12 @@ ul, li, a {
 
 .footer-submit-form__button {
   position: absolute;
-  top: 129px;
+  top: 7.9625rem;
   left: 2px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-transform: uppercase;
-  height: 40px;
-  width: 155px;
+  height: 3.077em;
+  width: 30.7%;
   color: #ffffff;
   background-color: #eb2b69;
   font-family: "Trebuchet MS";
@@ -1060,14 +1093,14 @@ ul, li, a {
 }
 
 .emblem-phone-cont__emblem-block {
-  margin-right: 90px;
-  margin-top: 30px;
+  margin-right: 13.84%;
+  margin-top: 4.615%;
 }
 
 .emblem-phone-cont__phone-block {
   font-style: italic;
-  margin-right: 95px;
-  margin-top: 8px;
+  margin-right: 14.615%;
+  margin-top: 1.23%;
 }
 
 .emblem-phone-cont__phone-country {
@@ -1076,24 +1109,30 @@ ul, li, a {
 }
 
 .emblem-phone-cont__phone-prefx {
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .emblem-phone-cont__phone-body {
   font-style: italic;
-  font-size: 36px;
+  font-size: 2.25rem;
   padding-left: 5px;
 }
 
 .low-cont {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 55px;
-          flex: 0 0 55px;
+      -ms-flex: 0 0 13.65%;
+          flex: 0 0 13.65%;
   width: 65.375%;
   padding-left: 1px;
 }
 
+@media screen and (max-width: 750px) {
+  .low-cont {
+    width: 90%;
+  }
+}
+
 .top-menu-and-signs__sign--footer {
-  font-size: 21px;
+  font-size: 1.3125rem;
 }
 /*# sourceMappingURL=style.css.map */
