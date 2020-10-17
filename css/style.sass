@@ -119,9 +119,18 @@ ul, li, a
   top: 0.5em
   padding-left: 0.6em
 
-.nav-menu__qaa:hover
-  color: red
+.sub-menu
+  position: absolute
+  width: 100%
+  background-color: #fff
+  padding: 2rem 0 1rem 0
+  display: none
+.sub-menu__element
+  padding-bottom: 1rem
+.nav-menu__qaa:hover .sub-menu
+  display: block
 
+   
 .nav-menu__element:first-child
   border-left: .5px solid
   border-image: linear-gradient(to bottom, white 0%, black 50%, white 100%) 1
@@ -132,9 +141,6 @@ ul, li, a
 
 .nav-menu__element a:hover
   border-bottom: 2px solid
-
-.sub-menu
-  display: none
 
 .main-top-snils__text-block
   position: absolute
